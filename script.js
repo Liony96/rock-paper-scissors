@@ -12,6 +12,10 @@ const pcImg = document.querySelector('#pcimage');
 //Counters
 let playerCounter = 0;
 let pcCounter = 0;
+let playerScore = document.getElementById('playerscore');
+let pcScore = document.getElementById('pcscore');
+console.log(playerScore.textContent);
+
 
 // Show rock pic when clicked
 rock.addEventListener('click', displayRock);
@@ -94,5 +98,7 @@ function counterFunction() {
       alert('+1 to Player. Rocks crushes scissors!');
     }
   }
+  pcScore.textContent = pcCounter;
+  playerScore.textContent = playerCounter;
 }
 
