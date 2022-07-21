@@ -8,27 +8,31 @@
 </head>
 <body>
   <div class="info-container">
-    <div class="logo-holder"></div>
-    <ul class="top-links">
-      <li class="link"><a href="#">Liony</a></li>
-    </ul>
-  </div>
-  <div class="header-container">
+    <div class="logo-holder"><img id="logo" src="images/rps-logo.jpg"></div>
     <header id="header-title">Rock Paper Scissors
     </header>
+    <ul class="top-links">
+      <li class="link"><a target="_blank" href="https://github.com/Liony96">Liony</a></li>
+    </ul>
   </div>
   <div class="score-container">
-    <div id="score-1"></div>
-  <div id="score-2"></div></div>
-  <div class="screen-container">
-    <div id="screen-1"></div>
-    <div id="screen-2"></div>
+    <div class="screen-container">
+      <div class="counter-screen screeen-player">
+        <p>Player: <span class="counter">0</span></p>
+        <div class="screen" id="screen-player"></div>
+      </div>
+      <img id="vs" src="images/vs.jpg" alt="vs">
+      <div class="counter-screen screen-pc">
+        <p>Computer: <span class="counter">0</span></p>
+        <div class = "screen" id="screen-pc"></div>
+      </div>
+    </div>
   </div>
   <div class="btn-container">
-    <button class="choices">Rock</button>
-    <button class="choices">Paper</button>
-    <button class="choices">Scissors</button>
+    <button class="choices" id="Rock"><img class="btn-img" id = "rock-img" src="images/rock.jpg" alt="Rock"></button>
+    <button class="choices" id="Paper"><img class="btn-img" id = "rock-img" src="images/paper.jpg" alt="Paper"></button>
+    <button class="choices" id="Scissors"><img class="btn-img" id = "rock-img" src="images/scissors.jpg" alt="Scissors"></button>
   </div>
-  <footer>In TOP I Trust</footer>
 </body>
+<footer>In TOP I Trust</footer>
 </html>
