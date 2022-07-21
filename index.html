@@ -4,7 +4,6 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src=""></script>
 </head>
 <body>
   <div class="info-container">
@@ -19,20 +18,22 @@
     <div class="screen-container">
       <div class="counter-screen screeen-player">
         <p>Player: <span class="counter">0</span></p>
-        <div class="screen" id="screen-player"></div>
+        <div class="screen" id="screenplayer"><img class = 'image' id = 'playerimage' src="images/holder.jpg" alt="holder-image"></div>
       </div>
       <img id="vs" src="images/vs.jpg" alt="vs">
       <div class="counter-screen screen-pc">
         <p>Computer: <span class="counter">0</span></p>
-        <div class = "screen" id="screen-pc"></div>
+        <div class = "screen" id="screenpc"><img id = "pcimage" src="images/holder.jpg" alt="holder-image"></div>
       </div>
     </div>
   </div>
+  <button id="refresh">&#8635</button>
   <div class="btn-container">
-    <button class="choices" id="Rock"><img class="btn-img" id = "rock-img" src="images/rock.jpg" alt="Rock"></button>
-    <button class="choices" id="Paper"><img class="btn-img" id = "rock-img" src="images/paper.jpg" alt="Paper"></button>
-    <button class="choices" id="Scissors"><img class="btn-img" id = "rock-img" src="images/scissors.jpg" alt="Scissors"></button>
+    <button class="choices" id="rock"><img class="btn-img" id = "rock-img" src="images/rock.jpg" alt="Rock"></button>
+    <button class="choices" id="paper"><img class="btn-img" id = "rock-img" src="images/paper.jpg" alt="Paper"></button>
+    <button class="choices" id="scissors"><img class="btn-img" id = "rock-img" src="images/scissors.jpg" alt="Scissors"></button>
   </div>
+  <script src="script.js"></script>
 </body>
 <footer>In TOP I Trust</footer>
 </html>

@@ -88,6 +88,11 @@ p {
     align-items: center;
 }
 
+#playerimage,
+#pcimage {
+    width: 250px;
+    height: 250px;
+}
 
 #vs {
     width: 100px;
@@ -99,7 +104,6 @@ p {
 .screen {
     height: 250px;
     width: 250px;
-    background-image: url(./images/holder.jpg);
 }
 
 .btn-container {
@@ -116,6 +120,16 @@ p {
     border-style: none;
     align-self: flex-end;
     box-shadow: 6px 6px;
+}
+
+#refresh {
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    font-size: 60px;
 }
 
 .btn-img {
