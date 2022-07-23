@@ -6,8 +6,8 @@ const scissors = document.getElementById('scissors');
 const choices = document.querySelectorAll('.choices');
 
 // Screens
-const playerImg = document.querySelector('#playerimage');
-const pcImg = document.querySelector('#pcimage');
+let playerImg = document.querySelector('#playerimage');
+let pcImg = document.querySelector('#pcimage');
 
 //Counters
 let playerCounter = 0;
@@ -62,7 +62,7 @@ function computerSelection() {
     pcImg.src = 'images/scissors.jpg';
     pcImg.alt = 'scissors';
   }
-  setTimeout(counterFunction, 1000);
+  setTimeout(counterFunction, 300);
 }
 
 
@@ -72,33 +72,61 @@ function counterFunction() {
       return;
     } else {
       alert('You are tie. Try again!');
+      holderDisplay();
     } 
   } else if (playerImg.alt === 'rock') {
     if (pcImg.alt === 'paper') {
       pcCounter ++;
       alert('+1 to Computer. Paper covers rock!');
+      holderDisplay();
     } else if (pcImg.alt === 'scissors') {
       playerCounter++;
       alert('+1 to Player. Rocks crushes scissors!');
+      holderDisplay();
     }
   } else if (playerImg.alt === 'paper') {
     if (pcImg.alt === 'rock') {
       playerCounter ++;
       alert('+1 to Player. Paper covers rock!');
+      holderDisplay();
     } else if (pcImg.alt === 'scissors') {
       pcCounter++;
       alert('+1 to Computer. Scissors cut the paper!');
+      holderDisplay();
     }
   } else if (playerImg.alt === 'scissors') {
     if (pcImg.alt === 'paper') {
       playerCounter ++;
-      alert('+1 to Computer. Scissors cut the paper!');
+      alert('+1 to Player. Scissors cut the paper!');
+      holderDisplay();
     } else if (pcImg.alt === 'rock') {
       pcCounter++;
-      alert('+1 to Player. Rocks crushes scissors!');
+      alert('+1 to Computer. Rocks crushes scissors!');
+      holderDisplay();
     }
   }
   pcScore.textContent = pcCounter;
   playerScore.textContent = playerCounter;
+
+  if (playerCounter == 5){
+    alert('Congratulations. You won! \n',
+    'Click OK button to start again');
+    playerCounter = pcCounter = 0;
+    pcScore.textContent = pcCounter;
+    playerScore.textContent = playerCounter;
+    holderDisplay();
+  } else if (pcCounter == 5) {
+    alert('Better luck next time. Computer won.\n',
+    'Click OK button to revenge!');
+    playerCounter = pcCounter = 0;
+    pcScore.textContent = pcCounter;
+    playerScore.textContent = playerCounter;
+    holderDisplay();
+  }
 }
 
+//--Changes the screen back to holder pic after every round
+function holderDisplay() {
+  playerImg.src = pcImg.src = 'images/holder.jpg';
+  playerImg.alt = pcImg.alt = 'holder';
+}
