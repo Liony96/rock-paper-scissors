@@ -4,35 +4,39 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <title>Rock-Paper-Scissors</title>
 </head>
 <body>
-  <div class="info-container">
-    <div class="logo-holder"><img id="logo" src="images/rps-logo.jpg"></div>
-    <header id="header-title">Rock Paper Scissors
-    </header>
-    <ul class="top-links">
-      <li class="link"><a target="_blank" href="https://github.com/Liony96">Liony</a></li>
-    </ul>
-  </div>
-  <div class="score-container">
+  <div class="overlay-text visible">Click to Start</div>
+  <header class="main-header">
+    <nav>
+      <ul>
+        <li class="header-links"><a href="#">GITHUB</a></li>
+        <li class="header-links"><a href="#">LIONY</a></li>
+        <li class="header-links"><a href="#">ABOUT</a></li>
+      </ul>
+    </nav>
+    <h1 class="header-title">ROCK PAPER SCISSORS</h1>
+  </header>
+  <div class="game-container">
     <div class="screen-container">
-      <div class="counter-screen screeen-player">
-        <p>Player: <span id="playerscore">0</span></p>
-        <div class="screen" id="screenplayer"><img class = 'image' id = 'playerimage' src="images/holder.jpg" alt="holder-image"></div>
+      <div class="screen player-screen"></div>
+      <div class="screen computer-screen"></div>
+    </div>
+    <div class="btn-container">
+      <div class="selection-container">
+        <div class="btn">✊</div>
+        <p>ROCK</p>
       </div>
-      <img id="vs" src="images/vs.jpg" alt="vs">
-      <div class="counter-screen screen-pc">
-        <p>Computer: <span id="pcscore">0</span></p>
-        <div class = "screen" id="screenpc"><img id = "pcimage" src="images/holder.jpg" alt="holder-image"></div>
+      <div class="selection-container">
+        <div class="btn">✋</div>
+        <p>PAPER</p> 
+      </div>
+      <div class="selection-container">
+        <div class="btn">✌️</div>
+        <p>SCISSORS</p>
       </div>
     </div>
   </div>
-  <div class="btn-container">
-    <button class="choices" id="rock">✊</button>
-    <button class="choices" id="paper">✋</button>
-    <button class="choices" id="scissors">✌️</button>
-  </div>
-  <script src="script.js"></script>
 </body>
-<footer>In TOP I Trust</footer>
 </html>
